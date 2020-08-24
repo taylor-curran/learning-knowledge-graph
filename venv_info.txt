@@ -1,0 +1,29 @@
+Create New Venv:
+- python3 -m venv venv
+
+Activate Venv:
+- source venv/bin/activate
+
+See which version of python is being used:
+- which python
+
+See which packages you have:
+- pip list
+
+Install a package:
+- pip install ___
+
+Package List in Format for requirements.txt:
+- pip freeze
+
+To put it into requirements.txt:
+- pip freeze > requirements.txt
+
+To Deactivate:
+- deactivate
+
+To Delete venv:
+- rm -rf venv/
+
+To Install requirements.txt:
+- pip install -r requirements.txt
