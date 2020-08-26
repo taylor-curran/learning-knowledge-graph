@@ -15,7 +15,7 @@ doc_1500 = nlp(coating_1500)
 # for token in doc_1500:
 #     print(token.text)
 
-span = doc_2500[:56]
+span = doc_2500[15:40]
 print(span)
 
 # print([token.like_num for token in doc_2500])
@@ -27,6 +27,18 @@ nlp = spacy.load("en_core_web_sm")
 
 doc = nlp(str(span))
 
+
 for token in doc:
     # Print the text and the predicted part-of speech tag
     print(token.text, token.pos_, token.dep_, token.head.text)
+
+# print(".text - .pos_ - .dep_ - .head.text")
+
+# for token in doc:
+#     if token.dep_.endswith("mod"):
+#         print(token.text, token.pos_, token.dep_, token.head.text)
+
+# print(".text - .pos_ - .dep_ - .head.text")
+
+for token in doc:
+    print(token.dep_.find("subj") == True)
