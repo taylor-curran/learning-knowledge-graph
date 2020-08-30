@@ -16,7 +16,7 @@ doc_1500 = nlp(coating_1500)
 #     print(token.text)
 
 span = doc_2500[15:40]
-print(span)
+# print(span)
 
 # print([token.like_num for token in doc_2500])
 
@@ -28,9 +28,9 @@ nlp = spacy.load("en_core_web_sm")
 doc = nlp(str(span))
 
 
-for token in doc:
-    # Print the text and the predicted part-of speech tag
-    print(token.text, token.pos_, token.dep_, token.head.text)
+# for token in doc:
+#     # Print the text and the predicted part-of speech tag
+#     print(token.text, token.pos_, token.dep_, token.head.text)
 
 # print(".text - .pos_ - .dep_ - .head.text")
 
@@ -40,5 +40,17 @@ for token in doc:
 
 # print(".text - .pos_ - .dep_ - .head.text")
 
-for token in doc:
-    print(token.dep_.find("subj") == True)
+# for token in doc:
+#     print(token.dep_.find("subj") == True)
+
+
+# sentencizer = nlp.create_pipe("sentencizer")
+# nlp.add_pipe(sentencizer)
+
+# doc_2500 = nlp()
+
+# Iterating Sentence by Sentence
+# What exactly is a generator object?
+doc = nlp(coating_2500)
+for i in doc.sents:
+    print(i)

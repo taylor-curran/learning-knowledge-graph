@@ -30,3 +30,7 @@ To Install requirements.txt:
 
 Rerouting Git for New Username:
 - git config --get remote.origin.url
+
+Add Virtual Environment to Jupyter Notebook
+pip install --user ipykernel
+python -m ipykernel install --user --name=myenv
