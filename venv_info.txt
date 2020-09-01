@@ -34,3 +34,6 @@ Rerouting Git for New Username:
 Add Virtual Environment to Jupyter Notebook
 pip install --user ipykernel
 python -m ipykernel install --user --name=myenv
+
+To Download spaCy Model Packages:
+- python -m spacy download en_core_web_md
